@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comandos Git - Guia Rápido</title>
+
+    <style>
+
+     img{width: 300px;}
+     p{color:blue;}
+     h1{color :red;}
+     
+     ul{background-color: lightgray;padding: 20px}
+
+     table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+
+    </style>
+
+</head>
+<body>
+
+<h1>Comandos Git - Guia Rápido</h1>
+
+<h2>1. Configurando o Nome e E-mail</h2>
+<p>Antes de fazer commits no Git, você precisa configurar seu nome e e-mail.</p>
+<pre><code>git config --global user.name "Seu Nome"</code></pre>
+<pre><code>git config --global user.email "seuemail@exemplo.com"</code></pre>
+
+<hr> <!--cria uma linha-->
+
+
+<h2>2. Verificando o Status</h2>
+<p>Use o comando <code>git status</code> para ver quais arquivos foram modificados ou estão prontos para o commit.</p>
+<pre><code>git status</code></pre>
+
+<h2>3. Adicionando Arquivos ao Staging</h2>
+<p>Para preparar um arquivo para o commit, você precisa adicioná-lo ao "staging area" com <code>git add</code>.</p>
+<pre><code>git add arquivo.txt</code></pre>
+<p>Para adicionar todos os arquivos modificados de uma vez:</p>
+<pre><code>git add .</code></pre>
+
+<h2>4. Fazendo o Commit</h2>
+<p>Depois de adicionar os arquivos ao staging, use o comando <code>git commit</code> para registrar as mudanças no histórico do projeto.</p>
+<pre><code>git commit -m "Mensagem do commit"</code></pre>
+
+<h2>5. Enviando para o Repositório Remoto</h2>
+<p>Use o comando <code>git push</code> para enviar suas mudanças para o repositório remoto, como o GitHub.</p>
+<pre><code>git push</code></pre>
+
+
+<h2>6. Recuperando Mudanças do Repositório Remoto</h2>
+<p>Use o comando <code>git pull</code> para baixar e mesclar as mudanças do repositório remoto.</p>
+<pre><code>git pull</code></pre>
+
+<h2 style="color: #FF0000;"> 7 - Listas</h2>
+
+<p>
+    o Html possuem listas nao ordenadas e listas ordenadas  ,as listas nao ordenadas sao definidas com a tag &alt;ul&gt; enquanto usamos &alt;
+</p>
+<ul>
+    <li>panquecas</li>
+    <li>pera</li>
+    <li>uva</li>
+    <li>maça</li>
+
+</ul>
+<ol start "s" type>
+    <li>panquecas</li>
+    <li>pera</li>
+    <li>uva</li>
+    <li>maça</li>
+</ol>
+
+<h2>Tags de formataçao</h2>
+ <p>Lorem ipsum<strong>amet</strong> adipisicing elit. Maiores dignissimos nesciunt sapiente pariatur aliquam amet nisi vero vel alias laborum assumenda explicabo modi non, nostrum inventore, corrupti porro quo illo.</p>
+ 
+ <hr>
+
+ <h1> links e imagens</h1>
+ <a href="blanck"href="https://www.google.com">
+    google
+ </a>
+ <br>
+ <a href="https://www.google.com">
+    google
+ </a>
+
+ <br>
+
+ <img src="web/naruto.jpg" alt="naruto">
+
+
+
+
+ <img src="https://sm.ign.com/ign_br/cover/d/dragon-bal/dragon-ball-daima_eada.jpg"
+ alt="dragomball Z"
+ >
+ <hr>
+
+ <h1>tabelas no html</h1>
+
+ <table>
+    <tr>
+        <td>Joao</td>
+        <td>20</td>
+        <td>Estudante</td>
+        
+    </tr>
+    <tr>
+        <td>Maria</td>
+        <td>30</td>
+        <td>desenvolvedora</td>
+        
+    </tr>
+
+ </table>
+
+ <h1>Formulário</h1>
+
+ <form action="https://google.com/search">
+    
+    <input  type="text" value="" placeholder="Digite algo ">
+    
+    <label for="q">query de busca</label>
+
+    <input id="q" name="q" type="text">
+
+    <input type ="submit"  value="Buscar" >
+    </form>
+
+</body>
+</html>
