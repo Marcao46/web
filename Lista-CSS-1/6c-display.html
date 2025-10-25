@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>6c-display</title>
+    <style>
+        body {
+            /* Contêiner de referência: essencial para 'position: absolute' */
+            position: relative; 
+            height: 500px; /* Aumenta a altura do body para mostrar o posicionamento */
+        }
+        .box {
+            width: 80px;
+            height: 80px; 
+            text-align: center;
+            line-height: 80px; 
+            font-size: 20px;
+            color: white;
+            /* **PROPRIEDADE-CHAVE:** Tira o elemento do fluxo normal e permite posicionamento com coordenadas */
+            position: absolute; 
+        }
+        /* Posicionamento dos blocos */
+        #box1 { background-color: red;    top: 10px; left: 10px; }
+        #box2 { background-color: yellow; top: 10px; right: 10px; color: black; }
+        #box3 { background-color: magenta; top: 50%; left: 50%; 
+                /* Centraliza o bloco, pois top/left 50% posicionam a QUINA superior esquerda no meio */
+                transform: translate(-50%, -50%); } 
+        #box4 { background-color: blue;   bottom: 10px; left: 10px; }
+        #box5 { background-color: green;  bottom: 10px; right: 10px; }
+
+         .menu{
+    color: black;
+    background-color: rgb(75, 158, 181);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-radius: 5px;
+    position: relative; 
+    top: 500px;}
+
+.menu{
+    color: black; 
+    text-decoration: none; 
+}
+
+.menu:hover{
+    color: white; 
+    background-color: rgb(174, 174, 191); 
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">box1</div>
+    <div class="box" id="box2">box2</div>
+    <div class="box" id="box3">box3</div>
+    <div class="box" id="box4">box4</div>
+    <div class="box" id="box5">box5</div>
+    <br>
+
+<div class="menu">
+    <a href="index.html"> Voltar ao Menu</a>
+</div>
+
+</body>
+</html>

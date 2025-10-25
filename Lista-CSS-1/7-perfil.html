@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 - Perfil Profissional de Joana Barbosa</title>
+    
+    <style>
+        /* ------------------------------------------------ */
+        /* ESTILOS GERAIS */
+        /* ------------------------------------------------ */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0; /* Cor de fundo para destacar o documento */
+        }
+
+        .perfil-container {
+            width: 800px; /* Largura fixa típica de um CV */
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Reset de margens para títulos */
+        h1, h2, h3, p, ul {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        /* ------------------------------------------------ */
+        /* 1. LAYOUT PRINCIPAL (Flexbox para Duas Colunas) */
+        /* ------------------------------------------------ */
+        .perfil-body {
+            display: flex; /* Define o Flexbox para organizar as colunas lado a lado */
+        }
+
+        .coluna-lateral {
+            width: 30%; /* Largura da coluna escura */
+            background-color: #3f4a58; /* Cor de fundo escura */
+            color: white;
+            padding: 20px 0; /* Padding vertical */
+            flex-shrink: 0; /* Impede que a coluna lateral encolha */
+        }
+
+        .coluna-principal {
+            width: 70%; /* Largura da coluna clara */
+            padding: 40px;
+        }
+
+        /* ------------------------------------------------ */
+        /* 2. CABEÇALHO (Foto e Resumo) */
+        /* ------------------------------------------------ */
+        .perfil-header {
+            display: flex;
+            padding: 40px 40px 20px 40px;
+            align-items: center; /* Centraliza a foto e o texto verticalmente */
+            border-bottom: 2px solid #eee;
+        }
+
+        .header-conteudo {
+            padding-left: 20px;
+        }
+
+        .perfil-header h1 {
+            color: #3f4a58;
+            margin-top: 0;
+        }
+
+        /* ------------------------------------------------ */
+        /* 3. ESTILO DA FOTO (Composição Visual) */
+        /* ------------------------------------------------ */
+        .foto-container {
+            width: 120px; 
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden; 
+            border: 5px solid #3f4a58; /* Borda da cor da barra lateral */
+            /* Puxa a foto para sobrepor a borda do cabeçalho, simulando a imagem */
+            margin-left: -5px; 
+            margin-right: 15px;
+            flex-shrink: 0; /* Não permite que o contêiner encolha */
+        }
+
+        .foto-perfil {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ------------------------------------------------ */
+        /* 4. ESTILOS DA COLUNA LATERAL (Detalhes Pessoais) */
+        /* ------------------------------------------------ */
+        .titulo-secao-lateral {
+            font-size: 1.1em;
+            padding: 5px 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil para o título */
+            text-transform: uppercase;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .secao-pessoal dl {
+            margin: 0;
+        }
+        
+        .secao-pessoal dt {
+            font-weight: bold;
+            color: #ddd;
+            margin-top: 10px;
+            padding: 0 20px;
+        }
+
+        .secao-pessoal dd {
+            margin-left: 0;
+            padding: 0 20px;
+            font-size: 0.9em;
+        }
+
+        /* ------------------------------------------------ */
+        /* 5. ESTILOS DA COLUNA PRINCIPAL (Experiência) */
+        /* ------------------------------------------------ */
+        .titulo-principal {
+            color: #3f4a58;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        .experiencia {
+            margin-bottom: 20px;
+        }
+
+        .cabecalho-experiencia {
+            display: flex;
+            justify-content: space-between; /* Alinha nome do cargo à esquerda e período à direita */
+            align-items: baseline;
+        }
+
+        .cabecalho-experiencia h3 {
+            font-size: 1.1em;
+            color: #3f4a58;
+            margin-bottom: 0;
+        }
+
+        .periodo {
+            color: gray;
+            font-size: 0.9em;
+            flex-shrink: 0;
+        }
+
+        .local {
+            font-style: italic;
+            margin-top: 0;
+            color: #666;
+        }
+
+        .experiencia ul {
+            padding-left: 20px;
+            list-style: disc;
+            font-size: 0.95em;
+        }
+
+    .menu{
+    color: black;
+    background-color: rgb(75, 158, 181);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-radius: 5px;}
+
+.menu{
+    color: black; 
+    text-decoration: none; 
+}
+
+.menu:hover{
+    color: white; 
+    background-color: rgb(174, 174, 191); 
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="perfil-container">
+        <header class="perfil-header">
+            <div class="foto-container">
+                <img src="img/Joana_Barbosa.png" alt="Foto de Perfil de Joana Barbosa" class="foto-perfil">
+            </div>
+            
+            <div class="header-conteudo">
+                <h1>Joana Barbosa</h1>
+                <p>Uma marketer digital com sentido de missão e com mais de três anos de experiência em conduzir iniciativas promocionais. Sou uma especialista em online marketing, lead generation e nurturing. Tenho uma comunicação exemplar, aptidões interpessoais e trabalho bem sobre pressão de forma a atingir os objetivos.</p>
+            </div>
+        </header>
+
+        <div class="perfil-body">
+            
+            <aside class="coluna-lateral">
+                
+                <div class="secao-pessoal">
+                    <h3 class="titulo-secao-lateral">Pessoal</h3>
+                    
+                    <dl>
+                        <dt>Nome</dt>
+                        <dd>Joana Barbosa</dd>
+
+                        <dt>Endereço</dt>
+                        <dd>Rua da Paz, 250<br>7100-011 Lisboa</dd>
+
+                        <dt>Número de telefone</dt>
+                        <dd>9630002121</dd>
+
+                        <dt>Email</dt>
+                        <dd>exemplos@cvmaker.pt</dd>
+                    </dl>
+                </div>
+                
+                <div class="secao-interesses">
+                    <h3 class="titulo-secao-lateral">Interesses</h3>
+                    </div>
+
+            </aside>
+
+            <main class="coluna-principal">
+                
+                <h2 class="titulo-principal">Experiência profissional</h2>
+                
+                <section class="experiencia">
+                    <div class="cabecalho-experiencia">
+                        <h3>Junior SEO Marketer</h3>
+                        <span class="periodo">2017 - 2019</span>
+                    </div>
+                    <p class="local">Cyanca, Lisboa</p>
+                    <ul>
+                        <li>Página on/off SEO</li>
+                        <li>Estratégias de linkbuilding</li>
+                        <li>Criação de conteúdo relevante</li>
+                        <li>Trabalho com ferramentas online: Ahrefs, Google Analytics, Google Search Console, Google Adwords</li>
+                    </ul>
+                </section>
+
+                <section class="experiencia">
+                    <div class="cabecalho-experiencia">
+                        <h3>Assistente de Vendas</h3>
+                        <span class="periodo">2015 - 2016</span>
+                    </div>
+                    <p class="local">Salsa, Lisboa</p>
+                    <ul>
+                        <li>Contribuição para os objetivos de vendas</li>
+                        <li>Gestão de inventário</li>
+                        <li>Apoio a clientes</li>
+                    </ul>
+                </section>
+                
+            </main>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+<div class="menu">
+    <a href="index.html"> Voltar ao Menu</a>
+</div>
+
+
+
+
+</body>
+</html>

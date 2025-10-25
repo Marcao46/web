@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-barquinho.html - Animação CSS</title>
+    
+    <style>
+        /* ---------------------------------------------------- */
+        /* ANIMAÇÕES @KEYFRAMES */
+        /* ---------------------------------------------------- */
+
+        /* 1. Balanço do Barco (Rotação leve) */
+        @keyframes balanco {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(1.5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        /* 2. Movimento Horizontal do Barco */
+        @keyframes navegar {
+            0% { left: 0%; }
+            100% { left: 100%; }
+        }
+
+        /* 3. Movimento leve da Nuvem (Flutuação) */
+        @keyframes flutuar {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(20px); } /* Leve movimento vertical */
+            100% { transform: translateY(0); }
+        }
+
+        /* 4. Movimento de Travessia da Nuvem (Ida e volta completa no loop infinito) */
+        @keyframes travessia {
+            0% { right: -200px; } /* Começa fora da tela (à direita) */
+            100% { right: 100%; } /* Move para fora da tela (à esquerda) */
+        }
+        
+        /* ---------------------------------------------------- */
+        /* ESTILOS DE LAYOUT (Céu, Mar e Contêiner) */
+        /* ---------------------------------------------------- */
+        
+        body {
+            margin: 0;
+            overflow: hidden; /* Esconde elementos que saem da tela (nuvem e barco) */
+        }
+
+        .ceu {
+            width: 100vw;
+            height: 100vh;
+            /* Fundo do céu: linear-gradient */
+            background: linear-gradient(to bottom, #87CEEB 0%, #ADD8E6 100%);
+            position: relative; /* Contexto para position: absolute */
+        }
+
+        .mar {
+            width: 100%;
+            height: 30%; /* Ocupa 30% da altura da viewport */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            /* Cor do mar: Azul mais escuro */
+            background-color: #3867d6; 
+            border-top: 5px solid #005f99; /* Borda para simular a linha do mar */
+        }
+
+        /* ---------------------------------------------------- */
+        /* ESTILOS DA NUVEM (Border-radius e Box-shadow) */
+        /* ---------------------------------------------------- */
+        
+        .nuvem {
+            position: absolute;
+            top: 100px;
+            right: 0; 
+            width: 120px;
+            height: 40px;
+            background: white;
+            border-radius: 40px; 
+            box-shadow: 
+                30px 0 0 10px white,   /* Círculo 1 (direita) */
+                -20px 0 0 10px white,  /* Círculo 2 (esquerda) */
+                10px -20px 0 10px white; /* Círculo 3 (topo) */
+            opacity: 0.9;
+            z-index: 1;
+
+            /* Aplica a animação de travessia e flutuação */
+            animation: 
+                travessia 40s linear infinite, /* Movimento horizontal (lento) */
+                flutuar 5s ease-in-out infinite alternate; /* Movimento leve (vertical) */
+        }
+        
+        /* ---------------------------------------------------- */
+        /* ESTILOS DO BARQUINHO (SVG Modificado) */
+        /* ---------------------------------------------------- */
+        
+        .barquinho {
+            /* Dimensões do Barco */
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 25%; /* Ajustado para flutuar sobre o mar */
+            z-index: 10; 
+            
+            /* Animação horizontal e de balanço */
+            animation: 
+                navegar 20s linear infinite, /* Movimento de travessia */
+                balanco 3s ease-in-out infinite alternate; /* Movimento de balanço */
+
+            /* Posicionamento inicial para navegação */
+            left: -100px; 
+            
+            /* === SVG PREENCHIDO COM AZUL E CONTORNO PRETO === */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath fill='%2300BFFF' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M25 5L10 35H40L25 5z'/%3E%3Cpath fill='%2300BFFF' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 35h40l-5 10H10l-5-10z'/%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M25 35V5'/%3E%3C/svg%3E");
+            
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            /* Ponto de rotação para o balanço */
+            transform-origin: 50% 90%; 
+        }
+        
+         .menu{
+    color: black;
+    background-color: rgb(75, 158, 181);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-radius: 5px;}
+
+.menu{
+    color: black; 
+    text-decoration: none; 
+}
+
+.menu:hover{
+    color: white; 
+    background-color: rgb(174, 174, 191); 
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="ceu">
+        <div class="nuvem"></div>
+        
+        <div class="nuvem" style="top: 150px; animation-duration: 30s; opacity: 0.7; animation-delay: -10s;"></div> 
+        
+        <div class="barquinho"></div>
+        
+        <div class="mar"></div>
+    </div>
+
+    <div class="menu">
+    <a href="index.html"> Voltar ao Menu</a>
+</div>
+</body>
+</html>
